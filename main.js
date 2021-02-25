@@ -8,45 +8,6 @@ function Book(title, author, pages) {
   this.info = function () {
     return [title, author, pages];
   };
-  createBookDiv();
-}
-
-const newBook = new Book(
-  document.getElementsByName("title")[0].value,
-  document.getElementsByName("author")[0].value,
-  document.getElementsByName("pages")[0].value
-);
-
-// prevent form refresh
-var form = document.getElementById("formContainer");
-function handleForm(event) {
-  event.preventDefault();
-}
-form.addEventListener("submit", handleForm);
-
-console.log(newBook.info());
-
-// creating the book div element
-const Cards = document.querySelector("#cards");
-function createBookDiv() {
-  const newCard = document.createElement("div");
-  newCard.classList.add("card");
-  newCard.setAttribute(
-    "style",
-    "top: 5vh; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: rgb(36, 202, 161); border-radius: 15px; padding: 120px; max-width: 120px; max-height: 300px; margin: 15px; text-align: center; font-weight: 600; font-size: 18px;"
-  );
-  newCard.textContent = [
-    newBook.title,
-    " " + newBook.author,
-    " " + newBook.pages,
-  ];
-  Cards.appendChild(newCard);
-}
-
-// adding a new book
-const Main = document.querySelector("#main");
-function addNewBook() {
-  document.getElementById("popupForm").style.display = "block";
 }
 
 // open and close form
@@ -59,3 +20,40 @@ function closeForm() {
 
 // adding books to library
 function addBookToLibrary() {}
+
+// getting book details
+// Get form, item, and wishlist
+let formPopup = document.querySelector("#formID");
+let title = document.querySelector("#title");
+let author = document.querySelector("#author");
+let pages = document.querySelector("#pages");
+let cards = document.querySelector("#cards");
+
+formPopup.addEventListener(
+  "submit",
+  function (event) {
+    // Don't submit the form
+    event.preventDefault();
+
+    // Ignore it if the wishlist item is empty
+    if (title.value.length < 1) return;
+    if (author.value.length < 1) return;
+    if (author.value.length < 1) return;
+
+    // Add book as Card
+    cards.innerHTML =
+      cards.innerHTML +
+      "<div>" +
+      title.value +
+      ", by " +
+      author.value +
+      ", " +
+      pages.value +
+      "</div>";
+    // Clear input
+    title.value = "";
+    author.value = "";
+    pages.value = "";
+  },
+  false
+);

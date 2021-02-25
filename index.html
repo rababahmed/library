@@ -22,21 +22,21 @@
       <button class="newButton" onclick="openForm()">Add New Book</button>
       <div class="loginPopup">
         <div class="formPopup" id="popupForm">
-          <form action="#" onsubmit="createBookDiv();return false" class="formContainer">
+          <form action="#" class="formContainer" id="formID">
             <h2>Add a new Book</h2> <br>
             <label for="title">
               <strong>Book Title</strong>
             </label>
-            <input type="text" id="title" placeholder="The Title" name="title" required>
+            <input type="text" id="title" placeholder="The Title" name="title">
             <label for="author">
               <strong>Author</strong>
             </label>
-            <input type="text" id="author" placeholder="The Author" name="author" required>
+            <input type="text" id="author" placeholder="The Author" name="author">
             <label for="pages">
               <strong>Pages</strong>
             </label>
-            <input type="text" id="pages" placeholder="Total Pages" name="pages" required>
-            <button type="submit" class="btn" onclick="createBookDiv()">Add</button>
+            <input type="text" id="pages" placeholder="Total Pages" name="pages">
+            <button type="submit" class="btn" id="submit" name="submit">Add</button>
             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
           </form>
         </div>
