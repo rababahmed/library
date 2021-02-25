@@ -49,6 +49,7 @@ formPopup.addEventListener(
       author.value +
       ", " +
       pages.value +
+      " pages."
       "</div>";
     // Clear input
     title.value = "";
