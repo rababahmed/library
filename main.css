@@ -157,6 +157,27 @@ body {
           justify-content: center;
 }
 
+#main #container #cards div {
+  top: 5vh;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #24caa1;
+  border-radius: 15px;
+  padding: 20px 80px;
+  max-width: 320px;
+  max-height: 360px;
+  margin: 15px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
 #main #container #cards .card {
   top: 5vh;
   position: relative;

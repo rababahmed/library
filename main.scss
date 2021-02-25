@@ -130,6 +130,22 @@ body {
       flex-direction: row;
       justify-content: center;
 
+      div {
+        top: 5vh;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(36, 202, 161);
+        border-radius: 15px;
+        padding: 20px 80px;
+        max-width: 320px;
+        max-height: 360px;
+        margin: 15px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+      }
       .card {
         top: 5vh;
         position: relative;
