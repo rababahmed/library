@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Library Tracker</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="topBar">
+      <h1>Personal Library Tracker</h1>
+    </div>
+
+    <div id="main">
+      <h1 class="contentTitle">My Books</h1>
+      <button class="newButton" onclick="openForm()">Add New Book</button>
+      <div class="loginPopup">
+        <div class="formPopup" id="popupForm">
+          <form action="#" onsubmit="createBookDiv();return false" class="formContainer">
+            <h2>Add a new Book</h2> <br>
+            <label for="title">
+              <strong>Book Title</strong>
+            </label>
+            <input type="text" id="title" placeholder="The Title" name="title" required>
+            <label for="author">
+              <strong>Author</strong>
+            </label>
+            <input type="text" id="author" placeholder="The Author" name="author" required>
+            <label for="pages">
+              <strong>Pages</strong>
+            </label>
+            <input type="text" id="pages" placeholder="Total Pages" name="pages" required>
+            <button type="submit" class="btn" onclick="createBookDiv()">Add</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+      </div>
+      <div id="container">
+        <div id="cards">
+          
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

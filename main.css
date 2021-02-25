@@ -1,0 +1,201 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  background-color: #e2e5e7;
+}
+
+.topBar {
+  position: fixed;
+  width: 100vw;
+  height: 6vh;
+  background: #0fb4a6;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.topBar h1 {
+  position: absolute;
+  font-weight: 600;
+  font-size: 24px;
+  color: white;
+}
+
+#main {
+  background-color: #e2e5e7;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  top: 6vh;
+}
+
+#main .contentTitle {
+  position: relative;
+  font-size: 24px;
+  left: 50px;
+  top: 2vh;
+}
+
+#main .newButton {
+  position: relative;
+  float: right;
+  right: 5vw;
+  background-color: #0fb4a6;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  top: -15px;
+  border: none;
+  outline: none;
+  width: 140px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#main .newButton:hover {
+  -webkit-box-shadow: 0px 5px 15px #b6b6b6;
+          box-shadow: 0px 5px 15px #b6b6b6;
+}
+
+#main .loginPopup {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+#main .formPopup {
+  display: none;
+  position: fixed;
+  left: 45%;
+  top: 5%;
+  -webkit-transform: translate(-50%, 5%);
+          transform: translate(-50%, 5%);
+  border: 3px solid #999999;
+  z-index: 9;
+}
+
+#main .formContainer {
+  max-width: 300px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+#main .formContainer input[type="text"],
+#main .formContainer input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 20px 0;
+  border: none;
+  background: #eee;
+}
+
+#main .formContainer input[type="text"]:focus,
+#main .formContainer input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+#main .formContainer .btn {
+  padding: 12px 20px;
+  border: none;
+  background-color: #8ebf42;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+#main .formContainer .cancel {
+  background-color: #cc0000;
+}
+
+#main .formContainer .btn:hover,
+#main .openButton:hover {
+  opacity: 1;
+}
+
+#main #container {
+  position: relative;
+  background-color: white;
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  border-radius: 10px;
+  top: 5vh;
+}
+
+#main #container #cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main #container #cards .card {
+  top: 5vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #24caa1;
+  border-radius: 15px;
+  padding: 120px;
+  max-width: 120px;
+  max-height: 300px;
+  margin: 15px;
+  text-align: center;
+}
+
+#main #container #cards .card h1 {
+  font-size: 36px;
+  padding: 10px;
+}
+
+#main #container #cards .card h2 {
+  font-size: 20px;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+#main #container #cards .card h3 {
+  font-size: 14px;
+  padding: 10px;
+  white-space: nowrap;
+}
+/*# sourceMappingURL=main.css.map */
