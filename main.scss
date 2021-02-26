@@ -74,14 +74,23 @@ body {
     left: 50%;
     top: 20%;
     transform: translate(-50%, 5%);
-    border: 3px solid #999999;
     z-index: 9;
   }
   .formContainer {
     max-width: 300px;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgb(15, 180, 166);
+    border-radius: 20px;
   }
+
+  h2 {
+    color: white;
+  }
+
+  label {
+    color: white;
+  }
+
   .formContainer input[type="text"],
   .formContainer input[type="password"] {
     width: 100%;
@@ -89,17 +98,21 @@ body {
     margin: 5px 0 20px 0;
     border: none;
     background: #eee;
+    font-size: 14px;
+    font-weight: 500;
   }
   .formContainer input[type="text"]:focus,
   .formContainer input[type="password"]:focus {
     background-color: #ddd;
     outline: none;
+    color: black;
   }
   .formContainer .btn {
     padding: 12px 20px;
     border: none;
-    background-color: #8ebf42;
-    color: #fff;
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+    color: rgb(15, 180, 166);
     cursor: pointer;
     width: 100%;
     margin-bottom: 15px;
@@ -107,10 +120,18 @@ body {
   }
   .formContainer .cancel {
     background-color: #cc0000;
+    font-weight: 600;
+    color: white;
   }
   .formContainer .btn:hover,
   .openButton:hover {
     opacity: 1;
+  }
+
+  #switch {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
 
   #container {
@@ -130,36 +151,23 @@ body {
       flex-direction: row;
       justify-content: center;
 
-      div {
-        top: 5vh;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(36, 202, 161);
-        border-radius: 15px;
-        padding: 20px 80px;
-        max-width: 320px;
-        max-height: 360px;
-        margin: 15px;
-        text-align: center;
-        font-size: 20px;
-        font-weight: 600;
-        color: white;
-      }
       .card {
         top: 5vh;
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        color: white;
+        font-weight: 600;
+        font-size: 20px;
         background-color: rgb(36, 202, 161);
         border-radius: 15px;
-        padding: 120px;
-        max-width: 120px;
-        max-height: 300px;
+        padding: 40px;
+        max-width: 320px;
+        height: 420px;
         margin: 15px;
         text-align: center;
+        overflow: auto;
 
         h1 {
           font-size: 36px;
@@ -174,6 +182,21 @@ body {
           font-size: 14px;
           padding: 10px;
           white-space: nowrap;
+        }
+
+        #removeBtn {
+          position: relative;
+          float: left;
+          background-color: white;
+          border: none;
+          border-radius: 10px;
+          color: black;
+          font-weight: 500;
+          font-size: 14px;
+          margin: 50px 0px 0px 0px;
+          padding: 10px;
+          bottom: 0;
+          cursor: pointer;
         }
       }
     }
